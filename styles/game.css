@@ -1,0 +1,13 @@
+#game {
+  border: solid;
+  margin: auto;
+  display: block;
+}
+
+#scoreboard {
+  height: 90px;
+  width: 1000px;
+  border: solid green;
+  margin: auto;
+  display: block;
+}
