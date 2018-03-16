@@ -1,8 +1,10 @@
-const chai = require('chai');
-const assert = chai.assert;
+class Car {
+  constructor(x, y, width, height) {
+    this.x = x;
+    this.y = y;
+    this.width = width;
+    this.height = height;
+  }
+}
 
-describe('test', function() {
-  it('should return true', function() {
-    assert.equal(true, true);
-  });
-});
+module.exports = Car;
