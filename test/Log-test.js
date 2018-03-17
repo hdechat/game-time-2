@@ -24,9 +24,42 @@ describe ('Log', function() {
     var frog = new Frog(10, 40, 20, 20);
     log.collides(frog);
     assert.equal(log.collision, false);
-    frog.hopUp();
+    frog.hopUp();//frog touching
+    frog.hopUp();//frog halfway
+    frog.hopUp();//frog fully on
     log.collides(frog);
     assert.equal(log.collision, true);
+    assert.equal(log.y, frog.y);
+    frog.hopUp();
+    frog.hopUp();
+    frog.hopUp();
+    log.collides(frog);
+    assert.equal(log.collision, false);
+  });
+
+  it('should move left', function() {
+    var log = new Log(20, 20, 20, 20);
+    log.moveLeft();
+    log.moveLeft();
+    assert.equal(log.x, 0);
+  });
+
+  it('should let the frog ride', function() {
+    var log = new Log(10, 10, 60, 20);
+    var frog = new Frog(30, 40, 20, 20);
+    log.collides(frog);
+    assert.equal(log.collision, false);
+    frog.hopUp();//frog touching
+    frog.hopUp();//frog halfway
+    frog.hopUp();//frog fully on
+    log.collides(frog);
+    assert.equal(log.collision, true);
+    assert.equal(log.y, frog.y);;
+    assert.equal(frog.x, 20);
+    log.moveLeft();//to be looped
+    log.collides(frog);//to be looped
+    assert.equal(log.x, 0);
+    assert.equal(frog.x, 10);
   });
 });
 

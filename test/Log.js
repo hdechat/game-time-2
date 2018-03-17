@@ -4,7 +4,7 @@ class Log {
     this.y = y;
     this.width = width;
     this.height = height;
-    this.collision = true
+    this.collision = false
   }
 
   collides(frog) {
@@ -17,8 +17,13 @@ class Log {
       this.collision = false;
       } else {
       this.collision = true;
+      this.moveLeft.call(frog);
       }
     }
+
+  moveLeft() {
+    this.x -= 10;
+  }    
 }
 
 class Frog {
