@@ -1,5 +1,6 @@
 const assert = require('chai').assert;
-const {Log, Frog} = require('./Log.js');
+const Log = require('./Log.js');
+const Frog = require('./Frog.js');
 
 describe ('Log', function() {
   it('should be a function', function() {
