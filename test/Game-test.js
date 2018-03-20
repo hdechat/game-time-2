@@ -1,5 +1,5 @@
 const assert = require('chai').assert;
-const Game = require('./Game.js');
+const Game = require('../lib/Game.js');
 
 describe('Game', function() {
   it('should instantiate a game board with log, and 3 frogs', function() {
