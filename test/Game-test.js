@@ -1,6 +1,6 @@
 var chai = require('chai');
 var assert = chai.assert;
-// const context = require('test-context');
+var context = require('test-context');
 const Game = require('../lib/Game.js');
 // const Log = require('../lib/Log.js');
 // const Car = require('../lib/Car.js');
@@ -8,7 +8,7 @@ const Game = require('../lib/Game.js');
 // const StaticElements = require('./StaticElements.js')
 // const Homes = require('../lib/Homes.js')
 
-describe('Game', () => {
+describe('Game', function () {
   var game;
 
     beforeEach(() => {
@@ -22,7 +22,7 @@ describe('Game', () => {
     // this.homes = new Homes();
     
       
-    it.only('should have attributes', () => {
+    it('should have attributes', function () {
       assert.equal(game.context, context);
       assert.equal(game.gameFrogCount, 5);
       assert.equal(game.deadStatus, false);
