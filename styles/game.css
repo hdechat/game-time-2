@@ -1,3 +1,10 @@
+#instructions {
+}
+
+.start-game-button {
+
+}
+
 #game {
   border: solid;
   margin: auto;
@@ -10,4 +17,11 @@
   border: solid green;
   margin: auto;
   display: block;
+}
+
+.score, .lives{
+  display: inline-block;
+  font-family: sans-serif;
+  font-size: 20px;
+  padding-right: 3rem;
 }

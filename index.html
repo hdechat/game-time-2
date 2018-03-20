@@ -7,11 +7,21 @@
   <title>Game Time</title>
 </head>
 
-<body>
+<body class="container">
   <div id="scoreboard">
+    <p class="score"></p>
+    <p class="lives"></p>
+  </div>
+  <div id="instructions">
+    <p id="scoreboard">Instructions here
+    <button class="start-game-button">Start Game</button></p>
   </div>
   <canvas id="game" width="1000" height="500">
   </canvas>
+  <script
+  src="http://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
   <script src="main.bundle.js"></script>
 </body>
 
