@@ -41,7 +41,7 @@ describe('Frog', function(){
     assert.equal(car.x, 0);
   });
 
-  it.only('should check if it collides with frog', function(){
+  it('should check if it collides with frog', function(){
     assert.equal(car.checkIfCarCollidesWithFrog(frog), false);
     frog.hopUp();
     car.moveRight(100);
