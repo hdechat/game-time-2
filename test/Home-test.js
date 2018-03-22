@@ -33,4 +33,4 @@ describe('Home', function() {
 //     assert.equal(home.status = 'occupied');
 //     assert.equal(home.checkForFrog(frog), true);
 //   })
-// });
+});
