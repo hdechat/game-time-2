@@ -4,7 +4,7 @@ var Frog = require('../lib/Frog.js');
 var Block = require('../lib/Block.js');
 var Log = require('../lib/Log.js');
 
-describe('Frog', function() {
+describe('Frog', function () {
   var log;
   var frog;
 
@@ -13,11 +13,11 @@ describe('Frog', function() {
     log = new Log(200, 200, 100, 50, 'brown');
   });
 
-  it('should be an object', function() {
+  it('should be an object', function () {
     assert.isObject(frog);
   });
 
-  it('should be a child of Block, extending position and dimension parameters', function() {
+  it('should be a child of Block, extending position and dimension parameters', function () {
     assert.equal(frog.x, 480);
     assert.equal(frog.y, 347);
     assert.equal(frog.width, 40);
@@ -25,29 +25,29 @@ describe('Frog', function() {
     assert.equal(frog.color, 'red');
   });
 
-  it('should be a function', function() {
+  it('should be a function', function () {
     assert.isFunction(frog.hopLeft);
     assert.isFunction(frog.hopRight);
     assert.isFunction(frog.hopDown);
     assert.isFunction(frog.hopUp);
   })
 
-  it('should hop left', function() {
+  it('should hop left', function () {
     frog.hopLeft();
     assert.equal(frog.x, 415);
   });
 
-  it('should hop right', function(){
+  it('should hop right', function () {
     frog.hopRight();
     assert.equal(frog.x, 545);
   });
 
-  it('should hop up', function() {
+  it('should hop up', function () {
     frog.hopUp();
     assert.equal(frog.y, 282);
   });
 
-  it('should hop down', function() {
+  it('should hop down', function () {
     frog.hopDown();
     assert.equal(frog.y, 412);
   });
