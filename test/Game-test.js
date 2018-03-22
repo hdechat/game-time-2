@@ -38,12 +38,5 @@ describe('Game', function () {
     assert.typeOf(game.gameFrog, 'object');
   });
 
-  it('should have game functions', function () {
-    assert.isFunction(game.checkFrogDrowns);
-    assert.isFunction(game.frogDies);
-    assert.isFunction(game.levelUpNewGame);
-    assert.isFunction(game.startGameTimer);
-    assert.isFunction(game.gameOver);
-  });
 });
 
