@@ -45,7 +45,7 @@ describe('Log', function () {
     assert.equal(log.collision, true);
   });
 
-  it('should move left', function () {
+  it('log moves left reduces the x coordinate', function () {
     assert.equal(log.x, 400);
 
     log.moveLeft(100);
@@ -54,7 +54,7 @@ describe('Log', function () {
     assert.equal(log.x, 200);
   });
 
-  it('should let the frog ride', function () {
+  it('log detects frog collision and then x coordinates of both show equal reduction of value', function () {
     frog = new Frog(400, 30, 40, 40);
     
     log.checkForFrog(frog, 100);

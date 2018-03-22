@@ -16,20 +16,12 @@ describe('Frog', function () {
     assert.isObject(car);
   });
 
-  it('should be a child of Block, extending position and dimension parameters', function () {
-    assert.equal(car.x, 100);
-    assert.equal(car.y, 130);
-    assert.equal(car.width, 50);
-    assert.equal(car.height, 50);
-    assert.equal(car.color, 'tan');
-  });
-
   it('should be a function', function () {
     assert.isFunction(car.moveRight);
     assert.isFunction(car.checkIfCarCollidesWithFrog);
   });
 
-  it('should move right', function () {
+  it('when car moves right the x coordinate increases', function () {
     assert.equal(car.x, 100);
     car.moveRight(1)
     assert.equal(car.x, 101);

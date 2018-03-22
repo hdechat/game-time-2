@@ -17,14 +17,6 @@ describe('Frog', function () {
     assert.isObject(frog);
   });
 
-  it('should be a child of Block, extending position and dimension parameters', function () {
-    assert.equal(frog.x, 480);
-    assert.equal(frog.y, 347);
-    assert.equal(frog.width, 40);
-    assert.equal(frog.height, 40);
-    assert.equal(frog.color, 'red');
-  });
-
   it('should be a function', function () {
     assert.isFunction(frog.hopLeft);
     assert.isFunction(frog.hopRight);
@@ -32,22 +24,22 @@ describe('Frog', function () {
     assert.isFunction(frog.hopUp);
   })
 
-  it('should hop left', function () {
+  it('frog hops left decreases x coordinate', function () {
     frog.hopLeft();
     assert.equal(frog.x, 415);
   });
 
-  it('should hop right', function () {
+  it('frog hops right increases x coordinate', function () {
     frog.hopRight();
     assert.equal(frog.x, 545);
   });
 
-  it('should hop up', function () {
+  it('frog hops up decreases y coordinate', function () {
     frog.hopUp();
     assert.equal(frog.y, 282);
   });
 
-  it('should hop down', function () {
+  it('frog hops down increases y coordinate', function () {
     frog.hopDown();
     assert.equal(frog.y, 412);
   });
