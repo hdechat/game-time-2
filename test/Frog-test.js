@@ -24,22 +24,22 @@ describe('Frog', function () {
     assert.isFunction(frog.hopUp);
   })
 
-  it('should hop left', function () {
+  it('frog hops left decreases x coordinate', function () {
     frog.hopLeft();
     assert.equal(frog.x, 415);
   });
 
-  it('should hop right', function () {
+  it('frog hops right increases x coordinate', function () {
     frog.hopRight();
     assert.equal(frog.x, 545);
   });
 
-  it('should hop up', function () {
+  it('frog hops up decreases y coordinate', function () {
     frog.hopUp();
     assert.equal(frog.y, 282);
   });
 
-  it('should hop down', function () {
+  it('frog hops down increases y coordinate', function () {
     frog.hopDown();
     assert.equal(frog.y, 412);
   });
