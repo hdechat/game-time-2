@@ -66,7 +66,6 @@ describe('Log', function () {
     assert.equal(log.x, 300);
     assert.equal(frog.x, 300);
   });
-
 });
 
 

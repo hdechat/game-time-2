@@ -36,5 +36,4 @@ describe('Home', function() {
     frog.hopUp()
     assert.equal(home.checkForFrog(frog), true);
   });
-
 });
