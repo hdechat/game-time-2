@@ -2,6 +2,7 @@ var chai = require('chai');
 var assert = chai.assert;
 var Log = require('../lib/Log');
 var Frog = require('../lib/Frog')
+var Game = 
 
 describe('Log', function () {
   var log;
@@ -65,7 +66,6 @@ describe('Log', function () {
     assert.equal(log.x, 300);
     assert.equal(frog.x, 300);
   });
-
 
 });
 

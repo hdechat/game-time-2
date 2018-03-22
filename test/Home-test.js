@@ -12,7 +12,7 @@ describe('Home', function() {
 
   it('should be an object', function() {
     assert.isObject(home);
-  })
+  });
 
   it('should be a child of Block, extending position and dimension parameters', function() {
     assert.equal(home.x, 75);
@@ -20,17 +20,21 @@ describe('Home', function() {
     assert.equal(home.width, 110);
     assert.equal(home.height, 50);
     assert.equal(home.color, 'green')
-  })
+  });
 
   it('should be a function', function() {
     assert.isFunction(home.checkForFrog);
-  })
+  });
 
-//   it('should change status to occupied if frog is in home', function() {
-//     var frog = new Frog(80, 122, 40, 40, 'green');
-//     frog.hopUp();
-//     assert.equal(frog.y, 57);
-//     assert.equal(home.status = 'occupied');
-//     assert.equal(home.checkForFrog(frog), true);
-//   })
+  it('should return false if frog is not in home', function() {
+    let frog = new Frog(80, 150, 40, 40);
+    assert.equal(home.checkForFrog(frog), false);
+  });
+
+  it('should return true if frog is in home', function() {
+    let frog = new Frog(80, 150, 40, 40);
+    frog.hopUp()
+    assert.equal(home.checkForFrog(frog), true);
+  });
+
 });
