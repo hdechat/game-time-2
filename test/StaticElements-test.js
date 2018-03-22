@@ -25,4 +25,5 @@ describe('StaticElements', function () {
       assert.equal(staticElementsCollection.height, 10);
       assert.deepEqual(staticElementsCollection.color, 'green');    
     })
+
 });
