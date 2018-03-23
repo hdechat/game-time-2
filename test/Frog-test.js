@@ -1,7 +1,6 @@
 var chai = require('chai');
 var assert = chai.assert;
 var Frog = require('../lib/Frog.js');
-var Block = require('../lib/Block.js');
 var Log = require('../lib/Log.js');
 
 describe('Frog', function () {
